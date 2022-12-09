@@ -1,0 +1,56 @@
+name: Deploy Quasar to Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: npm
+
+      # build app
+      - run: npm ci
+      - run: npm build
+
+      # copy additional static files
+      - run: cp ./CNAME ./dist/spa/CNAME
+      - run: cp ./404.html ./dist/spa/404.html
+
+      - name: Deploy page
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./dist/spa
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
