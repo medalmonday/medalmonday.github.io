@@ -33,7 +33,7 @@ jobs:
 
       # build app
       - run: npm ci
-      - run: npm build
+      - run: npm run build
 
       # copy additional static files
       - run: cp ./CNAME ./dist/spa/CNAME
