@@ -10,7 +10,7 @@
     "build:ssr": "quasar build --mode ssr",
     "dev": "quasar dev",
     "dev:ssr": "quasar dev --mode ssr",
-    "deploy": "cp ./404.html ./dist/spa/404.html && push-dir --dir=dist/spa --branch=gh-pages",
+    "deploy": "./deploy.sh",
     "lint": "eslint --ext .js,.ts,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },
