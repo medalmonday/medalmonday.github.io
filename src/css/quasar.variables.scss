@@ -1,0 +1,52 @@
+// Stromboli  #2E5D4E
+// Bon Jour   #DBD3D8
+// Cascade    #94A6AB
+// Hit Gray   #A8B4BA
+
+$primary: #2e5d4e;
+$secondary: #0d3822; // #2c6049
+$accent: #e6d5aa;
+
+$dark: #1d1d1d;
+$white: #fff;
+
+$positive: #039e15;
+$negative: #b83046;
+$info: #7fdbff;
+$warning: #ff851b;
+
+// Max width at which point
+// current size ends
+$breakpoint-xs: 599px !default; // 599 / 37.5rem
+$breakpoint-sm: 767px !default; // 1023 / 48rem
+$breakpoint-md: 1023px !default; // 1439  / 64rem
+$breakpoint-lg: 1279px !default; // 1919 / 80
+
+$body-font-size   : 16px !default;
+$body-line-height : 1.5 !default;
+
+// sorry for long line; we need .sass and it doesn't support multi-line list
+$sizes: ('xs': 0, 'sm': ($breakpoint-xs + 1), 'md': ($breakpoint-sm + 1), 'lg': ($breakpoint-md + 1), 'xl': ($breakpoint-lg + 1)) !default;
+
+$breakpoint-xs-max: (map-get($sizes, "sm") - 0.02) !default;
+$breakpoint-sm-min: map-get($sizes, "sm") !default;
+$breakpoint-sm-max: (map-get($sizes, "md") - 0.02) !default;
+$breakpoint-md-min: map-get($sizes, "md") !default;
+$breakpoint-md-max: (map-get($sizes, "lg") - 0.02) !default;
+$breakpoint-lg-min: map-get($sizes, "lg") !default;
+$breakpoint-lg-max: (map-get($sizes, "xl") - 0.02) !default;
+$breakpoint-xl-min: map-get($sizes, "xl") !default;
+
+// $h1:        (size: 3.75rem,  line-height: 3.75rem,  letter-spacing: -.01562em, weight: 300) !default;
+$h1:        (size: 3rem,     line-height: 3.125rem, letter-spacing: -.00833em, weight: 300) !default;
+$h2:        (size: 2.125rem, line-height: 2.5rem,   letter-spacing: .00735em,  weight: 400) !default;
+$h3:        (size: 1.5rem,   line-height: 2rem,     letter-spacing: normal,    weight: 400) !default;
+$h4:        (size: 1.25rem,  line-height: 2rem,     letter-spacing: .0125em,   weight: 400) !default;
+$h5:        (size: 1.125rem, line-height: 1.5rem,   letter-spacing: .0125em,   weight: 500) !default;
+// $h6
+$subtitle1: (size: 1rem,     line-height: 1.75rem,  letter-spacing: .00937em,  weight: 400) !default;
+$subtitle2: (size: .875rem,  line-height: 1.375rem, letter-spacing: .00714em,  weight: 500) !default;
+$body1:     (size: 1rem,     line-height: 1.5rem,   letter-spacing: .03125em,  weight: 400) !default;
+$body2:     (size: .875rem,  line-height: 1.25rem,  letter-spacing: .01786em,  weight: 400) !default;
+$overline:  (size: .75rem,   line-height: 2rem,     letter-spacing: .16667em,  weight: 500) !default;
+$caption:   (size: .75rem,   line-height: 1.25rem,  letter-spacing: .03333em,  weight: 400) !default;

@@ -1,0 +1,54 @@
+.home-page {
+  .img-home {
+    min-height: 18rem;
+    height: 80vh;
+  }
+
+  .cite {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow:	0 0.125rem 0.5rem rgba(0, 0, 0, .3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+    font-style: italic;
+    line-height: 1.5em;
+    padding: 0.75rem 1.25rem;
+    position: relative;
+
+    .quote {
+      font-style: normal;
+      font-size: 1.25rem;
+      font-weight: bold;
+      padding: 0 0.125rem;
+    }
+
+    &::before {
+      border: .75rem solid transparent;
+      border-bottom: none;
+      border-top-color: #fff;
+      bottom: -0.75rem;
+      content: '';
+      filter: drop-shadow(0 0.125rem 0.0625rem rgba(0, 0, 0, .3));
+      height: 0;
+      left: 1.5em;
+      position: absolute;
+      width: 0;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-sm-max) {
+    .img-home {
+      height: 70vh;
+    }
+
+    .home-features {
+      &,
+      .text-h2 {
+        text-align: center;
+        width: 100%;
+
+        .q-icon {
+          top: -0.0625rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.cookie-banner {
+  max-width: 64rem;
+  width: 100%;
+
+  @media screen and (max-width: $breakpoint-sm-max) {
+    .legal {
+      display: block;
+      order: 100;
+      text-align: right;
+    }
+  }
+}

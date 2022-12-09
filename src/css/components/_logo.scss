@@ -1,0 +1,66 @@
+.logo {
+  font-weight: 500;
+  text-decoration: none;
+
+  .logo__mm {
+    font-size: 1.125em;
+  }
+
+  .q-icon {
+    color: $secondary;
+    margin-right: 0.125em;
+
+    &,
+    svg {
+      font-size: 1em;
+    }
+  }
+}
+
+.logo__mm {
+  font-family: 'DFDejavuPro', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.hero-logo {
+  font-size: 1rem;
+  text-align: center;
+
+  .q-icon {
+    font-size: 4em;
+  }
+
+  &__icon {
+    padding-top: 0.0625em;
+  }
+
+  &__text {
+    font-size: 1em;
+    margin-left: 1em;
+
+    .logo-text {
+      font-size: 3em;
+      letter-spacing: 0;
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
+    .logo-slogan {
+      font-size: 1em;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-sm-max) {
+    font-size: 0.7rem;
+
+    &__icon,
+    &__text {
+      margin-bottom: 0.25em;
+    }
+
+    .logo-slogan {
+      letter-spacing: 0.0175em;
+    }
+  }
+}

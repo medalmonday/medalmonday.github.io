@@ -1,0 +1,55 @@
+.tile {
+  overflow: hidden;
+  text-overflow: clip;
+
+  &__content {
+    background-color: $white;
+  }
+
+  &--padded .tile__content > *:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  &--clean {
+    > .q-card {
+      background-color: transparent;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-sm-max) {
+    .full-mobile-tile {
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-xs-max) {
+    padding-left: 0;
+    padding-right: 0;
+    
+    // clean tiles do not have padding, add md padding to match padded tiles
+    &.tile--clean:not(.tile--padded) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .q-card {
+      border-left-width: none;
+      border-radius: 0;
+      border-right-width: none;
+    }
+  }
+}
+
+// body.body--dark .tile {
+//   &__content {
+//     background-color: $dark;
+//   }
+
+//   &--clean {
+//     > .q-card {
+//       background-color: transparent;
+//     }
+//   }
+// }
