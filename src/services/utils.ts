@@ -46,7 +46,7 @@ export const redirect = (link: string, replace = false): void => {
 
 export const onSendMail = (address = 'hello') => {
   if ('undefined' !== typeof window) {
-    const domain = window.location.hostname.split('.').slice(-2).join('.');
+    const domain = 'medalmonday.de';
     const link = `mailto:${address}@${domain}`;
 
     window.open(link);
