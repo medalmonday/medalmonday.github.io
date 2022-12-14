@@ -2,7 +2,7 @@
   <q-page class="row wrap content-start prototyping-page">
     <q-img
       loading="eager"
-      placeholder-src="https://placeimg.com/1920/480/tech"
+      placeholder-src="https://placeimg.com/640/200/tech"
       fetchpriority="high"
       class="img-home bg-primary"
       :ratio="6"

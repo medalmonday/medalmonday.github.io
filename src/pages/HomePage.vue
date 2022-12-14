@@ -2,7 +2,7 @@
   <q-page class="row wrap content-start home-page">
     <q-img
       loading="eager"
-      placeholder-src="https://placeimg.com/1920/480/tech"
+      placeholder-src="https://placeimg.com/640/200/tech"
       fetchpriority="high"
       class="bg-primary"
       :ratio="6"
@@ -73,13 +73,13 @@
             />
           </tile>
           <tile cols="12,12,4" clean>
-            <q-img src="https://placeimg.com/640/480/tech" :ratio="16/9" />
+            <q-img src="https://placeimg.com/640/480/tech?r=1" :ratio="16/9" />
           </tile>
         </div>
 
         <div class="row col-12 q-py-lg">
           <tile cols="12,12,4" clean>
-            <q-img src="https://placeimg.com/640/480/tech" :ratio="16/9" />
+            <q-img src="https://placeimg.com/640/480/tech?r=2" :ratio="16/9" />
           </tile>
           <tile cols="12,12,8" clean>
             <h3 class="text-h2 q-pb-md">{{ $t('legacy.title') }}</h3>
@@ -113,7 +113,7 @@
             />
           </tile>
           <tile cols="12,12,4" clean>
-            <q-img src="https://placeimg.com/640/480/tech" :ratio="16/9" />
+            <q-img src="https://placeimg.com/640/480/tech?r=3" :ratio="16/9" />
           </tile>
         </div>
       </div>
