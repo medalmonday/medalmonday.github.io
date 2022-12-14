@@ -38,7 +38,7 @@ export const generateMeta = (
 
   const pageTitle = i18n.t('app.title');
   const metaTitle = title
-    ? `${i18n.t(title, title)}${appendBrandname ? ` – ${pageTitle}` : ''}`
+    ? `${i18n.t(title, title)}${appendBrandname ? ` | ${pageTitle}` : ''}`
     : pageTitle;
   const metaDescription = description ? i18n.t(description, description) : '';
   const cache = Math.floor(new Date('2022-11-13').getTime() / 86400000);

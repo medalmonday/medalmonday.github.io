@@ -152,7 +152,7 @@ module.exports = configure((ctx) => ({
     manifest: {
       name: 'Medal Monday GmbH',
       short_name: 'Medal Monday GmbH',
-      description: '',
+      description: 'Test',
       display: 'standalone',
       orientation: 'portrait',
       background_color: '#ffffff',

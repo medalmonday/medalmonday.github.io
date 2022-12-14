@@ -80,14 +80,23 @@ export default {
   },
   home: {
     services: {
-      software: {
-
+      title: 'Unsere Leistungen.',
+      products: {
+        title: 'Maßgeschneiderte Webanwendungen',
+        text: [
+          'Bavaria ipsum dolor sit amet gscheid kimmt des is hoid aso anbandeln a bravs aba vo de Gamsbart. Koa hob a Prosit der Gmiadlichkeit Bladl, des is hoid aso auszutzeln noch da Giasinga Heiwog. Hi nomoi Schorsch wea ko, dea ko. Imma Blosmusi schaugn Gams, naa so oa ham! Broadwurschtbudn i hob di liab umananda de Lewakaas, i waar soweid! Zwedschgndadschi hoid schnacksln a fescha Bua, Foidweg schüds nei?',
+        ],
       },
       prototyping: {
-
+        title: 'Prototyping für Startups',
+        text: [
+          'Bavaria ipsum dolor sit amet gscheid kimmt des is hoid aso anbandeln a bravs aba vo de Gamsbart. Koa hob a Prosit der Gmiadlichkeit Bladl, des is hoid aso auszutzeln noch da Giasinga Heiwog. Hi nomoi Schorsch wea ko, dea ko. Imma Blosmusi schaugn Gams, naa so oa ham! Broadwurschtbudn i hob di liab umananda de Lewakaas, i waar soweid! Zwedschgndadschi hoid schnacksln a fescha Bua, Foidweg schüds nei?',
+        ],
       },
       legacy: {
-
+        text: [
+          'Bavaria ipsum dolor sit amet gscheid kimmt des is hoid aso anbandeln a bravs aba vo de Gamsbart. Koa hob a Prosit der Gmiadlichkeit Bladl, des is hoid aso auszutzeln noch da Giasinga Heiwog. Hi nomoi Schorsch wea ko, dea ko. Imma Blosmusi schaugn Gams, naa so oa ham! Broadwurschtbudn i hob di liab umananda de Lewakaas, i waar soweid! Zwedschgndadschi hoid schnacksln a fescha Bua, Foidweg schüds nei?',
+        ],
       },
     },
     teaser: {

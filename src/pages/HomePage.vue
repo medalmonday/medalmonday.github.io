@@ -17,21 +17,11 @@
               {{ $t('home.intro.text.1') }}
             </div>
             <q-btn
-              v-if="features.register"
-              :label="$t('session.link.gotoRegisterHome')"
-              :to="$l('register')"
+              :label="$t('session.link.gotoContact')"
+              :to="$l('contact')"
               color="primary"
               text-color="white"
               class="gt-sm"
-              no-caps
-            />
-            <q-btn
-              v-if="features.register"
-              :label="$t('session.link.gotoRegister')"
-              :to="$l('register')"
-              color="primary"
-              text-color="white"
-              class="lt-md"
               no-caps
             />
           </div>
@@ -46,27 +36,34 @@
         <p>{{ $t('home.intro.text.1') }}</p>
 
         <q-btn
-          v-if="features.register"
-          :label="$t('session.link.gotoRegisterHome')"
-          :to="$l('register')"
+          :label="$t('session.link.gotoContact')"
+          :to="$l('contact')"
           color="primary"
           text-color="white"
           no-caps
         />
       </tile>
+    </div>
 
-      <div class="col-12 q-py-xl home-teaser">
-        <div class="container-md">
-          <tile class="text-center" clean>
-            <h2 class="text-h2 q-pb-sm">{{ $t('home.teaser.title') }}</h2>
+    <div class="col-12 q-py-xl home-services">
+      <div class="container row">
+        <tile class="text-center" clean>
+          <h2 class="text-h2 q-pb-sm">{{ $t('home.services.title') }}</h2>
 
-            <p>{{ $t('home.teaser.text.0') }}</p>
-          </tile>
-        </div>
+          <p>{{ $t('home.services.text.0') }}</p>
+        </tile>
+        <tile cols="12,12,8" clean>
+          <h3 class="text-h2 q-pb-sm">{{ $t('home.services.products.title') }}</h3>
+
+          <p>{{ $t('home.services.products.text.0') }}</p>
+        </tile>
+        <tile cols="12,12,4" clean>
+          <q-img src="/images" />
+        </tile>
       </div>
     </div>
 
-    <div v-if="false" class="col-12 row q-py-xl bg-white home-services">
+    <div class="col-12 row q-py-xl bg-white home-services">
       <h2 class="col-12 q-pb-lg text-h2 text-center">
         {{ $t('home.services.title') }}
       </h2>
@@ -74,10 +71,10 @@
         <tile cols="12,6,4" clean padded>
           <h3 class="items-center col-12 text-h3">
             <q-icon name="fa-solid fa-globe" class="q-mr-sm" color="primary" />
-            {{ $t('home.services.software.title') }}
+            {{ $t('home.services.products.title') }}
           </h3>
 
-          <p class="q-mt-md">{{ $t('home.services.software.text.0') }}</p>
+          <p class="q-mt-md">{{ $t('home.services.products.text.0') }}</p>
         </tile>
         <tile cols="12,6,4" padded clean>
           <h3 class="items-center col-12 text-h3">
