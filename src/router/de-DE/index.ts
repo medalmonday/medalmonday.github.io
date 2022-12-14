@@ -8,6 +8,8 @@ export default {
   faq: '/faq',
   home: '/',
   imprint: '/impressum',
+  legacy: '/altsysteme',
   privacy: '/datenschutz',
-  status: '/status',
+  products: '/software',
+  prototyping: '/prototyping',
 };

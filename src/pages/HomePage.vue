@@ -2,9 +2,11 @@
   <q-page class="row wrap content-start home-page">
     <q-img
       loading="eager"
+      placeholder-src="https://placeimg.com/1920/480/tech"
       fetchpriority="high"
-      class="img-home bg-primary"
-      :alt="$t('home.title')"
+      class="bg-primary"
+      :ratio="6"
+      :alt="$t('app.title')"
     >
       <div class="absolute-full flex flex-center">
         <div class="container-sm">
@@ -29,7 +31,7 @@
       </div>
     </q-img>
 
-    <div class="col-12 row container mobile-intro">
+    <div v-if="false" class="col-12 row container mobile-intro">
       <tile class="text-center q-pb-xl q-pt-md" tile-class="lt-md bg-white" padded clean>
         <h3 class="text-h3">{{ $t('home.intro.catchPhrase') }}</h3>
         <p style="font-size:18px" class="q-my-md">{{ $t('home.intro.text.0') }}</p>
@@ -46,68 +48,89 @@
     </div>
 
     <div class="col-12 q-py-xl home-services">
-      <div class="container row">
+      <div class="container-md row">
         <tile class="text-center" clean>
           <h2 class="text-h2 q-pb-sm">{{ $t('home.services.title') }}</h2>
 
           <p>{{ $t('home.services.text.0') }}</p>
         </tile>
-        <tile cols="12,12,8" clean>
-          <h3 class="text-h2 q-pb-sm">{{ $t('home.services.products.title') }}</h3>
-
-          <p>{{ $t('home.services.products.text.0') }}</p>
-        </tile>
-        <tile cols="12,12,4" clean>
-          <q-img src="/images" />
-        </tile>
       </div>
-    </div>
 
-    <div class="col-12 row q-py-xl bg-white home-services">
-      <h2 class="col-12 q-pb-lg text-h2 text-center">
-        {{ $t('home.services.title') }}
-      </h2>
       <div class="container row">
-        <tile cols="12,6,4" clean padded>
-          <h3 class="items-center col-12 text-h3">
-            <q-icon name="fa-solid fa-globe" class="q-mr-sm" color="primary" />
-            {{ $t('home.services.products.title') }}
-          </h3>
+        <div class="row col-12 q-py-lg">
+          <tile cols="12,12,8" clean>
+            <h3 class="text-h2 q-pb-md">{{ $t('products.title') }}</h3>
 
-          <p class="q-mt-md">{{ $t('home.services.products.text.0') }}</p>
-        </tile>
-        <tile cols="12,6,4" padded clean>
-          <h3 class="items-center col-12 text-h3">
-            <q-icon name="fa-solid fa-handshake-simple" class="q-mr-sm" color="primary" />
-            {{ $t('home.services.prototyping.title') }}
-          </h3>
+            <p>{{ $t('home.services.products.text.0') }}</p>
 
-          <p class="q-mt-md">{{ $t('home.services.prototyping.text.0') }}</p>
-        </tile>
-        <tile cols="12,6,4" padded clean>
-          <h3 class="items-center col-12 text-h3">
-            <q-icon name="fa-solid fa-chart-line" class="q-mr-sm" color="primary" />
-            {{ $t('home.services.legacy.title') }}
-          </h3>
+            <q-btn
+              :to="$l('products')"
+              :label="$t('home.services.products.link')"
+              class="q-mt-md"
+              icon-right="fa-solid fa-arrow-right"
+              color="primary"
+              no-caps
+            />
+          </tile>
+          <tile cols="12,12,4" clean>
+            <q-img src="https://placeimg.com/640/480/tech" :ratio="16/9" />
+          </tile>
+        </div>
 
-          <p class="q-mt-md">{{ $t('home.services.legacy.text.0') }}</p>
-        </tile>
+        <div class="row col-12 q-py-lg">
+          <tile cols="12,12,4" clean>
+            <q-img src="https://placeimg.com/640/480/tech" :ratio="16/9" />
+          </tile>
+          <tile cols="12,12,8" clean>
+            <h3 class="text-h2 q-pb-md">{{ $t('legacy.title') }}</h3>
+
+            <p>{{ $t('home.services.legacy.text.0') }}</p>
+
+            <q-btn
+              :to="$l('legacy')"
+              :label="$t('home.services.legacy.link')"
+              class="q-mt-md"
+              icon-right="fa-solid fa-arrow-right"
+              color="primary"
+              no-caps
+            />
+          </tile>
+        </div>
+
+        <div class="row col-12 q-py-lg">
+          <tile cols="12,12,8" clean>
+            <h3 class="text-h2 q-pb-md">{{ $t('prototyping.title') }}</h3>
+
+            <p>{{ $t('home.services.prototyping.text.0') }}</p>
+
+            <q-btn
+              :to="$l('prototyping')"
+              :label="$t('home.services.prototyping.link')"
+              class="q-mt-md"
+              icon-right="fa-solid fa-arrow-right"
+              color="primary"
+              no-caps
+            />
+          </tile>
+          <tile cols="12,12,4" clean>
+            <q-img src="https://placeimg.com/640/480/tech" :ratio="16/9" />
+          </tile>
+        </div>
       </div>
     </div>
 
-    <div v-if="false" class="col-12 q-py-xl bg-primary text-white home-contact">
+    <div class="col-12 q-py-xl bg-primary text-white home-contact">
       <div class="container-md">
         <tile class="text-center" padded clean>
           <div class="q-mb-sm text-center">
             <h2 class="text-h2 q-pb-sm">{{ $t('home.contact.title') }}</h2>
           </div>
-          <div class="q-my-sm">{{ $t('home.contact.text') }}</div>
+          <div class="q-my-sm">{{ $t('home.contact.text.0') }}</div>
 
           <q-btn
-            :label="$t('session.link.gotoContact')"
+            :label="$t('general.contact.link')"
             :to="$l('contact')"
             color="secondary"
-            target="_blank"
             text-color="white"
             class="q-mt-md"
             no-caps
@@ -159,13 +182,8 @@ export default defineComponent({
     Tile,
   },
 
-  // async preFetch({ store }) {
-  //   const campaignStore = useCampaignStore(store);
-  //   await campaignStore.load();
-  // },
-
   setup() {
-    const meta = generateMeta('home.title', 'home.description', true, false);
+    const meta = generateMeta('app.title', 'home.description', true, false);
     addJsonLdMeta(meta, {
       '@context': 'https://schema.org',
       '@type': 'Organization',

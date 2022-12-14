@@ -28,6 +28,33 @@ const r: LocaleRouteRecord[] = [
   //   title: 'contact.title',
   //   name: 'contact',
   // },
+  // legacy
+  {
+    pathId: 'legacy',
+    layout: MainLayout,
+    page: 'LegacyPage.vue',
+    title: 'legacy.title',
+    description: 'legacy.description',
+    name: 'legacy',
+  },
+  // products
+  {
+    pathId: 'products',
+    layout: MainLayout,
+    page: 'ProductsPage.vue',
+    title: 'products.title',
+    description: 'products.description',
+    name: 'products',
+  },
+  // prototyping
+  {
+    pathId: 'prototyping',
+    layout: MainLayout,
+    page: 'PrototypingPage.vue',
+    title: 'prototyping.title',
+    description: 'prototyping.description',
+    name: 'prototyping',
+  },
   // imprint & legal
   {
     pathId: 'imprint',

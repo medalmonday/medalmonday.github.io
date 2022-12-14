@@ -114,6 +114,7 @@
 </template>
 
 <script lang="ts">
+import { useMeta } from 'quasar';
 import { defineComponent } from 'vue';
 import ALink from 'src/components/ALink.vue';
 import Tile from 'src/components/Tile.vue';
@@ -122,7 +123,6 @@ import TitleTile from 'src/components/tiles/TitleTile.vue';
 import { useLocaleRouter } from 'src/router/LocaleRouter';
 import { generateMeta } from 'src/services/metaUtils';
 import { onSendMail } from 'src/services/utils';
-import { useMeta } from 'quasar';
 
 export default defineComponent({
   name: 'ImprintPage',
